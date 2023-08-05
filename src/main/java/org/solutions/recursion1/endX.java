@@ -8,13 +8,13 @@ class endX {
 	 *	chars have been moved to the end of the string.
 	 */
 
-	public String solution(String str) {
+	public String endXSolution(String str) {
   		if (str.equals("")) {
     			return str;
   		} else if (str.charAt(0) == 'x') {
-    			return endX(str.substring(1)) + 'x';
+    			return endXSolution(str.substring(1)) + 'x';
   		}
   
-  		return str.charAt(0) + endX(str.substring(1));
+  		return str.charAt(0) + endXSolution(str.substring(1));
 	}
 }

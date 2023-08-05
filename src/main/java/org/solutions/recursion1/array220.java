@@ -10,13 +10,13 @@ class array220 {
 	 *	to move down the array. The initial call will pass in index as 0.
 	 */
 
-	public boolean solution(int[] nums, int index) {
+	public boolean array220Solution(int[] nums, int index) {
   		if (index >= nums.length - 1) {
     			return false;
   		} else if (nums[index + 1] == nums[index] * 10) {
     			return true;
   		}
   
-  		return array220(nums, index + 1);
+  		return array220Solution(nums, index + 1);
 	}
 }

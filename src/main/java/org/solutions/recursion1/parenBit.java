@@ -8,13 +8,13 @@ class parenBit {
 	 *	made of only of the parenthesis and their contents, so "xyz(abc)123" yields "(abc)".
 	 */
 
-	public String solution(String str) {
+	public String parenBitSolution(String str) {
   		if (str.length() <= 2) {
     			return str;
   		} else if (str.charAt(0) == '(') {
     			return str.substring(0, str.indexOf(")") + 1);
   		}
   
-  		return parenBit(str.substring(1));
+  		return parenBitSolution(str.substring(1));
 	}
 }

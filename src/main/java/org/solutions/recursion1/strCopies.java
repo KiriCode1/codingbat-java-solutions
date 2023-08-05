@@ -8,7 +8,7 @@ class strCopies {
 	 *	of sub appear in the string somewhere, possibly with overlapping. N will be non-negative.
 	 */
 
-	public boolean solution(String str, String sub, int n) {
+	public boolean strCopiesSolution(String str, String sub, int n) {
   		if (sub.equals("x") && n == 0) {
     			return true;
   		} else if (str.equals("ijiiiiij") && sub.equals("iiii") && n == 3) {
@@ -22,10 +22,10 @@ class strCopies {
     			if (n == 0) {
       				return true;
     			} else {
-      				return strCopies(str.substring(1), sub, n);
+      				return strCopiesSolution(str.substring(1), sub, n);
     			}
   		}
   
-  		return strCopies(str.substring(1), sub, n);
+  		return strCopiesSolution(str.substring(1), sub, n);
 	}
 }

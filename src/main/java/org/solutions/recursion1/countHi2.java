@@ -8,7 +8,7 @@ class countHi2 {
 	 *	however do not count "hi" that have an 'x' immedately before them.
 	 */
 
-	public int solution(String str) {
+	public int countHi2Solution(String str) {
   		if (str.length() < 2) {
     			return 0;
   		}
@@ -17,9 +17,9 @@ class countHi2 {
     			if ((str.length() > 2 
         		     && str.charAt(str.length() - 3) != 'x') 
         		     || str.length() == 2)
-      				return 1 + countHi2(str.substring(0, str.length() - 1));
+      				return 1 + countHi2Solution(str.substring(0, str.length() - 1));
   		}
-  		return countHi2(str.substring(0, str.length() - 1));
+  		return countHi2Solution(str.substring(0, str.length() - 1));
   
 	}
 }

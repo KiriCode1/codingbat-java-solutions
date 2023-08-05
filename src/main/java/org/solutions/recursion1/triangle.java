@@ -9,11 +9,11 @@ class triangle {
 	 *	the total number of blocks in such a triangle with the given number of rows.
 	 */
 
-	public int solution(int rows) {
+	public int triangleSolution(int rows) {
   		if (rows == 0) {
     			return 0;
   		}
   
-  		return rows + triangle(rows - 1);
+  		return rows + triangleSolution(rows - 1);
 	}
 }

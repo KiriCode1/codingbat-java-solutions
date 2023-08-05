@@ -8,13 +8,13 @@ class countHi {
 	 *	"hi" appears in the string.
 	 */
 
-	public int solution(String str) {
+	public int countHiSolution(String str) {
   		if (str.length() == 1 || str.equals("")) {
     			return 0;
   		} else if (str.substring(0, 2).equals("hi")) {
-    			return 1 + countHi(str.substring(1));
+    			return 1 + countHiSolution(str.substring(1));
   		}
   
-  		return countHi(str.substring(1));
+  		return countHiSolution(str.substring(1));
 	}
 }
